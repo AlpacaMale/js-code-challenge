@@ -30,7 +30,6 @@ function onGeoOk(position) {
       weatherMain.innerText = weatherCondition;
       icon1.innerHTML = icon;
       icon2.innerHTML = icon;
-      console.log(lat, lon);
     });
 }
 
