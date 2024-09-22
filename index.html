@@ -4,67 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanila - JS</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="login">
+    <form class="login">
       <h1 class="login__title">Hello! What's your name?</h1>
-      <input class="login__input" type="text" />
+      <input class="login__input" required type="text" />
       <p class="login__desc">Please enter your first name or the name you prefer to be called.</p>
-      <button class="login__btn">Continue <i class="fa-solid fa-angle-right"></i></button>
-    </div>
+      <button type="submit" class="login__btn">Continue <i class="fa-solid fa-angle-right"></i></button>
+    </form>
 
-    <header class="header">
+    <header class="header hidden">
       <button class="header__widget">
-        <span class="header__weather">img 26°</span>
-        <span class="header__location">Dongdaemun-gu</span>
+        <div class="header__weather-wrap">
+          <span class="header__icon"></span>
+          <span class="header__weather"></span>
+        </div>
+        <span class="header__location"></span>
       </button>
     </header>
 
-    <div class="main">
-      <span class="main__clock">06:56</span>
-      <span class="main__greet">Good morning, user.</span>
-      <span class="main__blah">What is your main goal for today?</span>
-      <input class="main__goal" type="text" />
-    </div>
+    <form class="main hidden">
+      <span class="main__clock"></span>
+      <span class="main__greet"></span>
+      <label for="goal" class="main__blah">What is your main goal for today?</label>
+      <input id="goal" class="main__goal" type="text" />
+      <span class="current__goal hidden"></span>
+      <button type="submit" class="main__submit"></button>
+    </form>
 
-    <div class="footer">
+    <div class="footer hidden">
       <div></div>
       <div class="footer__quote">
-        <span class="footer__quote-content">When you see a person without a smile, give them one of yours.</span>
-        <span class="footer__quote-author">Zig Ziglar</span>
+        <span class="footer__quote-content"></span>
+        <span class="footer__quote-author"></span>
       </div>
       <div class="footer__task">
         <button class="footer__task-btn">Tasks</button>
       </div>
     </div>
 
-    <div class="weather">
+    <div class="weather hidden">
       <div class="weather__cell">
-        <span class="weather__location">Dongdaemun-gu</span>
-        <span class="weather__condition">Cloudy</span>
+        <span class="weather__location"></span>
+        <span class="weather__condition"></span>
       </div>
       <div class="weather__cell">
-        <span class="">icon</span>
-        <span class="weather__temperature">26°</span>
+        <span class="weather__icon"></span>
+        <span class="weather__temperature"></span>
       </div>
       <div class="weather__cell">
-        <p>Feels like <span class="weather__perceived">29°</span></p>
-        <p>Recent rain <span class="weather__rain">16 mm</span></p>
-        <p>Wind <span class="weather__wind">5km/h</span></p>
+        <p>Feels like <span class="weather__perceived"></span></p>
+        <p>Wind <span class="weather__wind"></span></p>
       </div>
     </div>
 
-    <div class="tasks">
+    <form class="tasks hidden">
       <span class="tasks__title">Task List</span>
       <div class="tasks__content">
         <span class="tasks__content-text">Add a task to get started</span>
-        <button class="tasks__content-btn">New Task</button>
+        <label for="task__input" class="tasks__content-btn">New Task</label>
       </div>
-      <ul class="tasks__list"></ul>
-      <input class="tasks__new" type="text" placeholder="New Task" />
-    </div>
+      <ul class="tasks__list hidden"></ul>
+      <input required class="tasks__new" id="task__input" type="text" placeholder="New Task" />
+      <button class="task__submit" type="submit"></button>
+    </form>
+
     <script src="https://kit.fontawesome.com/06a089660a.js" crossorigin="anonymous"></script>
-    <script src="src/index.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/goal.js"></script>
   </body>
 </html>
