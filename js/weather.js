@@ -39,7 +39,7 @@ function onGeoError() {
 
 function getIcon(weatherCondition) {
   if (weatherCondition === "Thunderstorm") return '<i class="fa-solid fa-cloud-bolt"></i>';
-  else if (weatherCondition === "Drizzle" || weatherCondition === "rain") return '<i class="fa-solid fa-cloud-rain"></i>';
+  else if (weatherCondition === "Drizzle" || weatherCondition === "Rain") return '<i class="fa-solid fa-cloud-rain"></i>';
   else if (weatherCondition === "Snow") return '<i class="fa-solid fa-snowflake"></i>';
   else if (weatherCondition === "Atmosphere") return '<i class="fa-solid fa-smog"></i>';
   else if (weatherCondition === "Clear") return '<i class="fa-solid fa-sun"></i>';
